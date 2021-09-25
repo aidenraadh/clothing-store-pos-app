@@ -1,0 +1,282 @@
+@media only screen and (min-width: 1281px) {
+  html {
+    font-size: 0.78125vw;
+  }
+}
+
+/* html font size is 9.14px at 375 px, 1.6rem = 14.6px */
+@media only screen and (max-width: 1280px) {
+	html {
+	  font-size: calc(10px - ( (1280px - 100vw) * 0.0013043 ) );
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Tablet Layout
+|--------------------------------------------------------------------------
+|
+*/
+
+@media only screen and (max-width: 1100px){
+	#app{
+		padding: 9.6rem 4vw 18rem;
+	}
+
+	.topbar{
+		padding: 0 4vw;
+	}
+
+	.topbar .user-thumbnail .user-name{
+		width: 1px; height: 1px;
+		visibility: hidden;
+	}
+
+	.topbar .topbar-item.show-sidebar-btn{
+		display: flex;
+	}
+
+	.sidebar-main-navs-container{
+		position: static;
+		top: auto; left: auto;
+		height: auto; 
+	}	
+
+	.sidebar{
+		position: fixed; top: 0; left: 0;
+		width: 40vw;
+		min-height: 100vh;
+		overflow-y: auto;
+		background-color: #131628;
+		transform: translateX(-100%);
+		transition: transform 0.3s;
+	}
+
+	.sidebar.shown{
+		transform: translateX(0);
+	}	
+
+	.sidebar .hide-sidebar-btn{
+		display: inline-block;
+	}
+
+	.main-navs{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		flex-direction: row;
+		background-color: #131628;
+	}
+	.main-navs li{
+		width: 100%;
+	}
+	.main-navs .sidebar-item{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		font-size: 1.4rem;
+	}	
+
+	.sidebar-items-container .sidebar-item .text{
+		width: auto; height: auto;
+		padding-left: 1.4rem;
+		visibility: visible;
+	}
+
+	.modal .modal-content{
+		width: 80vw;
+	}
+
+	.modal.content-sized-modal .modal-content{
+		width: auto;
+	}	
+
+	#login-page .login-forms{
+		width: 50vw;
+	}
+	#login-page::before{
+		background-size: 40% auto;
+	}
+
+	.floating-btn{
+		right: 7vw;
+		bottom: 10rem;
+	}
+	.items-container > .item > h6{
+		width: 82%;
+	}
+	.items-container > .item > p > .btn{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;	
+		padding: 0.36em !important;
+	}
+	.items-container > .item > p > .btn > .svg-icon{
+		position: static;
+	}	
+	.items-container > .item > p > .btn > .btn-text{
+		padding: 0;
+		width: 1px; height: 1px;
+		visibility: hidden;overflow: hidden;		
+	}
+	.items-container > .item > p > .total-item-in-store{
+		display: none;
+	}	
+}
+
+@media only screen and (max-width: 1000px){	
+}
+
+@media only screen and (max-width: 900px){
+	.footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 800px){
+}
+
+/*
+|--------------------------------------------------------------------------
+| Mobile Layout
+|--------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 700px){	
+	#app{
+		padding: 9.6rem 3vw 10rem;
+	}
+	.sidebar{
+		width: 60vw;
+	}
+	.topbar{
+		padding: 0 3vw;
+	}
+	.main-navs .sidebar-item{
+		font-size: 1.4rem;
+	}		
+	.modal .modal-content,
+	.modal.content-sized-modal .modal-content{
+		width: 92vw;
+	}
+	.modal.content-sized-modal .modal-body{
+		width: 100% !important;
+	}
+		
+	.grid-3{
+		grid-template-columns: 48.5% 48.5%;
+		grid-column-gap: 3%;
+	}
+
+	.grid-3 .grid-item{
+		margin-bottom: 6%;
+	}
+	
+	#user-profile > p{
+		width: 100%;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#user-profile .profile-picture{
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+
+	#user-profile .info{
+		align-items: center;
+	}
+
+	#user-profile .info .user-details{
+		width: 100%;
+	}
+
+	#login-page {
+		background-size: 50% auto;
+	}	
+	
+	#login-page .login-forms{
+		width: 80vw;
+	}
+
+	.media-viewer > .media{
+		width: 100vw;
+		max-height: 82vh;
+	}	
+
+	#create_user_forms_modal .grid-2{
+		grid-template-columns: 100%;
+		column-gap: 0;
+	}
+
+	.update-profile .profile-section-label:nth-of-type(2) ~ .base-input{
+		width: 100%;
+		margin-bottom: 4%;
+	}
+
+	.update-profile .profile-section-label:nth-of-type(2) ~ .grid-2{
+		grid-template-columns: 100%;
+		column-gap: 0;
+	}
+
+	#update-profile-modal .flex-row{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}	
+	
+	#update-profile-modal .flex-row > .base-input{
+		width: 100%;
+	}
+
+	#navigate-stores .addon-input{
+		width: 100%;
+	}
+	.transactions-card .stats-card{
+		width: 100%;
+		margin-bottom: 1.4rem;
+	}
+	#filter-transactions-modal .modal-body > div .base-input{
+		width: 100%;
+	}
+
+	#update-quantity-modal .modal-body{
+		width: 100%;
+	}	
+
+	.dashboard-card .grid-3{
+		grid-template-columns: 100%;
+		grid-column-gap: 0;
+	}
+
+	.size-details .sizes-grid{
+		grid-template-columns: 48% 48%;
+		column-gap: 4%;
+	}
+
+	.sliding-stats-container > .stats-card{
+		width: 80%;
+	}	
+	.items-container > .item > h6{
+		width: 72%;
+	}
+	.login-forms .modal-content{
+		width: 92vw;
+	}	
+}
+
+@media only screen and (max-width: 600px){
+}
+
+@media only screen and (max-width: 500px){
+	#user-profile .update-profile .grid-2{
+		grid-template-columns: 100%;
+		grid-column-gap: 0;
+	}
+
+	#user-profile .update-profile .base-input{
+		width: 100%;
+	}
+}
